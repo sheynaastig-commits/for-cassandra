@@ -87,3 +87,13 @@ font-size:16px;
 h2{
 color:#ff4d6d;
 }
+
+.letter{
+opacity:0;
+transform:translateY(40px);
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
