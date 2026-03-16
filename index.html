@@ -1,6 +1,102 @@
-<body>
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Cassandra</title>
 
-<h1>Happy Birthday Cassandra ❤️</h1>
+<style>
+
+body{
+background:#ffd6e0;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+overflow:hidden;
+}
+
+/* envelope */
+
+.envelope{
+position:relative;
+width:260px;
+height:180px;
+background:#800020; /* maroon */
+border-radius:6px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:-90px;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-bottom:90px solid #800020;
+}
+
+.heart{
+font-size:40px;
+}
+
+/* letter */
+
+.letter{
+position:absolute;
+width:340px;
+height:420px;
+background:white;
+border-radius:10px;
+padding:25px;
+text-align:center;
+top:120px;
+overflow-y:auto;
+
+opacity:0;
+transform:translateY(100px);
+transition:0.6s;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* show letter */
+
+.show{
+opacity:1;
+transform:translateY(-160px);
+}
+
+/* text */
+
+h2{
+color:#800020;
+}
+
+p{
+font-size:17px;
+line-height:1.5;
+}
+
+/* proceed button */
+
+.proceed{
+margin-top:25px;
+padding:12px 22px;
+background:#800020;
+border:none;
+color:white;
+border-radius:25px;
+cursor:pointer;
+font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
 
 <div class="envelope" onclick="openLetter()">
 <div class="heart">❤️</div>
@@ -11,7 +107,35 @@
 <h2>Happy Birthday Cassandra</h2>
 
 <p>
-This small website is just for you.
+This little website is something I made just for you.
+</p>
+
+<p>
+I hope today is filled with laughter, happiness,
+and all the beautiful moments you deserve.
+</p>
+
+<p>
+Thank you for being such an amazing person
+and for bringing so much positivity into the lives
+of the people around you.
+</p>
+
+<p>
+You deserve all the good things in the world.
+</p>
+
+<p>
+I hope this year brings you new adventures,
+new memories, and many reasons to smile.
+</p>
+
+<p>
+Enjoy every second of your birthday.
+</p>
+
+<p>
+– Someone who cares about you
 </p>
 
 <button class="proceed" onclick="location.href='letter.html'">
@@ -20,7 +144,6 @@ Proceed ➜
 
 </div>
 
-<!-- JAVASCRIPT GOES HERE -->
 <script>
 
 function openLetter(){
@@ -30,5 +153,4 @@ document.getElementById("letter").classList.toggle("show");
 </script>
 
 </body>
-
-<script src="script.js"></script>
+</html>
