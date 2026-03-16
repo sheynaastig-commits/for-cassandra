@@ -1,25 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Birthday Letter</title>
+<title>For Cassandra</title>
+
+<style>
+
+body{
+background:#ffd6e0;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+flex-direction:column;
+overflow:hidden;
+}
+
+/* envelope */
+
+.envelope{
+position:relative;
+width:260px;
+height:180px;
+background:#800020;
+border-radius:6px;
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+z-index:2;
+}
+
+.envelope:before{
+content:"";
+position:absolute;
+top:-90px;
+border-left:130px solid transparent;
+border-right:130px solid transparent;
+border-bottom:90px solid #800020;
+}
+
+.heart{
+font-size:40px;
+}
+
+/* letter */
+
+.letter{
+position:absolute;
+width:320px;
+height:260px;
+background:white;
+border-radius:10px;
+padding:20px;
+text-align:center;
+
+bottom:120px;
+transform:translateY(120px);
+transition:0.7s;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.show{
+transform:translateY(-40px);
+}
+
+h2{
+color:#800020;
+}
+
+p{
+font-size:15px;
+line-height:1.4;
+}
+
+.proceed{
+margin-top:15px;
+padding:10px 20px;
+background:#800020;
+border:none;
+color:white;
+border-radius:25px;
+cursor:pointer;
+font-size:15px;
+}
+
+</style>
 </head>
 
-<body style="background:#ffd6e0; font-family:Arial; text-align:center; padding:50px;">
+<body>
 
-<h1>💌 Birthday Letter</h1>
+<div class="letter" id="letter">
 
-<p>Dear Cassandra,</p>
+<h2>Happy Birthday Cassandra</h2>
+
+<p>This is a little website I made just for you.</p>
 
 <p>
-Thank you for being my best friend.
-You make my life brighter and I appreciate every moment we share.
+I may never have anything fancy to give,
+but I still wanted to create something
+that could make you smile today.
 </p>
 
 <p>
-Happy Birthday! I hope your day is filled with happiness and love.
+I hope your birthday is filled with
+laughter and beautiful moments
+that you truly deserve.
 </p>
 
-<a href="index.html">⬅ Back</a>
+<p>– Someone who cares about you</p>
+
+<button class="proceed" onclick="location.href='gifts.html'">
+Open Gifts 🎁
+</button>
+
+</div>
+
+<div class="envelope" onclick="openLetter()">
+<div class="heart">❤️</div>
+</div>
+
+<script>
+
+function openLetter(){
+document.getElementById("letter").classList.toggle("show");
+}
+
+</script>
 
 </body>
 </html>
