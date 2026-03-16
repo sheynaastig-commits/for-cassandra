@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Choose a Gift</title>
+<title>Mystery Gifts</title>
 
 <style>
 
@@ -13,6 +13,7 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 height:100vh;
+margin:0;
 }
 
 h1{
@@ -22,31 +23,72 @@ margin-bottom:40px;
 
 .gifts{
 display:flex;
-gap:40px;
+gap:50px;
 }
 
+/* Gift Box */
+
 .box{
+position:relative;
 width:160px;
 height:160px;
-background:#800020;
-border-radius:15px;
+background:#c1121f;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
 display:flex;
 flex-direction:column;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:22px;
-cursor:pointer;
-transition:0.3s;
+font-weight:bold;
 }
+
+/* Ribbon Vertical */
+
+.box::before{
+content:"";
+position:absolute;
+width:20px;
+height:100%;
+background:#ffd6e0;
+left:50%;
+transform:translateX(-50%);
+}
+
+/* Ribbon Horizontal */
+
+.box::after{
+content:"";
+position:absolute;
+height:20px;
+width:100%;
+background:#ffd6e0;
+top:50%;
+transform:translateY(-50%);
+}
+
+/* Bow */
+
+.bow{
+position:absolute;
+top:-20px;
+font-size:30px;
+}
+
+/* Hover Effect */
 
 .box:hover{
-transform:scale(1.1);
+transform:scale(1.1) rotate(-2deg);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
-.icon{
-font-size:50px;
-margin-bottom:10px;
+/* Text */
+
+.label{
+position:relative;
+z-index:2;
+margin-top:10px;
 }
 
 </style>
@@ -54,23 +96,23 @@ margin-bottom:10px;
 
 <body>
 
-<h1>Pick a Gift 🎁</h1>
+<h1>Pick a Mystery Gift 🎁</h1>
 
 <div class="gifts">
 
 <div class="box" onclick="location.href='letter.html'">
-<div class="icon">💌</div>
-Letter
+<div class="bow">🎀</div>
+<div class="label">Mystery</div>
 </div>
 
 <div class="box" onclick="location.href='music.html'">
-<div class="icon">🎵</div>
-Music
+<div class="bow">🎀</div>
+<div class="label">Mystery</div>
 </div>
 
 <div class="box" onclick="location.href='pictures.html'">
-<div class="icon">📸</div>
-Pictures
+<div class="bow">🎀</div>
+<div class="label">Mystery</div>
 </div>
 
 </div>
