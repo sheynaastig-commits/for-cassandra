@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Choose a Gift</title>
+
+<style>
+
+body{
+background:#ffd6e0;
+font-family:Arial;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+height:100vh;
+}
+
+h1{
+color:#800020;
+margin-bottom:40px;
+}
+
+.gifts{
+display:flex;
+gap:40px;
+}
+
+.box{
+width:160px;
+height:160px;
+background:#800020;
+border-radius:15px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:22px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.box:hover{
+transform:scale(1.1);
+}
+
+.icon{
+font-size:50px;
+margin-bottom:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Pick a Gift 🎁</h1>
+
+<div class="gifts">
+
+<div class="box" onclick="location.href='letter.html'">
+<div class="icon">💌</div>
+Letter
+</div>
+
+<div class="box" onclick="location.href='music.html'">
+<div class="icon">🎵</div>
+Music
+</div>
+
+<div class="box" onclick="location.href='pictures.html'">
+<div class="icon">📸</div>
+Pictures
+</div>
+
+</div>
+
+</body>
+</html>
