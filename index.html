@@ -22,12 +22,13 @@ overflow:hidden;
 position:relative;
 width:260px;
 height:180px;
-background:#800020; /* maroon */
+background:#800020;
 border-radius:6px;
 display:flex;
 justify-content:center;
 align-items:center;
 cursor:pointer;
+z-index:2;
 }
 
 .envelope:before{
@@ -47,26 +48,25 @@ font-size:40px;
 
 .letter{
 position:absolute;
-width:340px;
-height:420px;
+width:320px;
+height:260px;
 background:white;
 border-radius:10px;
-padding:25px;
+padding:20px;
 text-align:center;
-top:120px;
-overflow-y:auto;
 
-opacity:0;
-transform:translateY(100px);
-transition:0.6s;
+bottom:120px;   /* hidden behind envelope */
+
+transform:translateY(120px);
+transition:0.7s;
+
 box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* show letter */
+/* slide out slightly */
 
 .show{
-opacity:1;
-transform:translateY(-160px);
+transform:translateY(-40px);
 }
 
 /* text */
@@ -76,21 +76,21 @@ color:#800020;
 }
 
 p{
-font-size:17px;
-line-height:1.5;
+font-size:15px;
+line-height:1.4;
 }
 
 /* proceed button */
 
 .proceed{
-margin-top:25px;
-padding:12px 22px;
+margin-top:15px;
+padding:10px 20px;
 background:#800020;
 border:none;
 color:white;
 border-radius:25px;
 cursor:pointer;
-font-size:16px;
+font-size:15px;
 }
 
 </style>
@@ -98,17 +98,11 @@ font-size:16px;
 
 <body>
 
-<div class="envelope" onclick="openLetter()">
-<div class="heart">❤️</div>
-</div>
-
 <div class="letter" id="letter">
 
 <h2>Happy Birthday Cassandra</h2>
 
-<p>
-This is a little website I made just for you.
-</p>
+<p>This is a little website I made just for you.</p>
 
 <p>
 I may never have anything fancy to give,
@@ -118,40 +112,24 @@ that could make you smile today.
 
 <p>
 I hope your birthday is filled with
-laughter, happiness, and beautiful moments
+laughter and beautiful moments
 that you truly deserve.
 </p>
 
 <p>
-Thank you for being such a kind
-and amazing person.
-You bring so much light and positivity
-to the people around you.
+Enjoy every second of your special day.
 </p>
 
-<p>
-You deserve all the good things
-this world has to offer.
-</p>
+<p>– Someone who cares about you</p>
 
-<p>
-I hope this year brings you
-new memories, new adventures,
-and many reasons to smile.
-</p>
-
-<p>
-Enjoy every moment of your special day.
-</p>
-
-<p>
-– Someone who cares about you
-</p>
-
-<button class="proceed" onclick="location.href='letter.html'">
-Proceed ➜
+<button class="proceed" onclick="location.href='gifts.html'">
+Open Gifts 🎁
 </button>
 
+</div>
+
+<div class="envelope" onclick="openLetter()">
+<div class="heart">❤️</div>
 </div>
 
 <script>
